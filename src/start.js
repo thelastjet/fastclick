@@ -30,7 +30,7 @@ export default function Start() {
     ).textContent = `You clicked ${count} times`;
   }, [count]);
 
-  if (time == 0) {
+  if (time === 0) {
     btn.disabled = true;
   }
 
@@ -64,27 +64,28 @@ export default function Start() {
         </button>
       </span>
       <span>
-        {!isRunning ?
-        <button
-          className="startBtn"
-          onClick={() => {
-            setIsRunning(true);
-          }}
-        >
-          Start
-        </button>
-        :
-        <button
-          className="resetBtn"
-          onClick={() => {
-            setIsRunning(false);
-            btn.disabled = true;
-            setTime(30);
-            setCount(0);
-          }}
-        >
-          Reset
-        </button>}
+        {!isRunning ? (
+          <button
+            className="startBtn"
+            onClick={() => {
+              setIsRunning(true);
+            }}
+          >
+            Start
+          </button>
+        ) : (
+          <button
+            className="resetBtn"
+            onClick={() => {
+              setIsRunning(false);
+              btn.disabled = true;
+              setTime(30);
+              setCount(0);
+            }}
+          >
+            Reset
+          </button>
+        )}
       </span>
       <span className="timeRemaining">Time Remaining: {time}</span>
       <span>
