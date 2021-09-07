@@ -22,7 +22,7 @@ export default function Start() {
       }, `${speed}`);
     }
     return () => clearInterval(intervalId);
-  }, [isRunning, time]);
+  }, [isRunning, time, btn, speed]);
 
   useEffect(() => {
     document.querySelector(
