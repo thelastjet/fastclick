@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.body {
+  background-image: url("./background.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.mouseClick {
+  display: flex;
+  max-width: 250px;
+  border: red solid 2px;
+  border-radius: 15px;
+}
+
+.h1span {
+  font-size: small;
+  display: flex;
+  text-align: center;
+}
+
+.speed {
+  background-color: green;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+.speedBtn {
+  background-color: red;
+  color: white;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  background-color: green;
+  color: white;
+  font-size: larger;
+  width: 240px !important;
+  height: 75px !important;
+  margin-top: 30px !important;
+}
+
+.startBtn {
+  background-color: green;
+  color: white;
+  width: 100px;
+  padding: 5px;
+}
+
+.resetBtn {
+  background-color: green;
+  color: white;
+  width: 100px;
+  padding: 5px;
+}
+
+.counter {
+  margin-top: 30px;
+  background-color: red;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.timeRemaining {
+  margin-top: 30px;
+  background-color: red;
+  padding-left: 5px;
+  padding-right: 5px;
 }

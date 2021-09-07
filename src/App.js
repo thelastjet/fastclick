@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Start from "./start";
+import mouseClick from "../src/mouseClick.jpg";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <h1>
+        Fast Click <span className="h1span">(curiously addicting)</span>
+      </h1>
+      {
+        <img
+          className="mouseClick"
+          src={mouseClick}
+          alt="clicking a computer mouse"
+        />
+      }
+
+      <p>Click timer speed and then click start!</p>
+      <Start />
+      <p>Click the button as fast as you can!</p>
+      <p>See how many times you can click before time expires!</p>
     </div>
   );
 }
-
-export default App;
